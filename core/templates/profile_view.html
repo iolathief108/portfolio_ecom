@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    is owner {{ is_owner }}
+
+    products
+    {% for product in products %}
+        {{ product.name }}
+        {{ product.brand }}
+        {{ product.category }}
+    {% endfor %}
+
+    rate value : {{ rate_value }}
+    rete count : {{ rate_count }}
+    product count: {{ product_count }}
+
+    rented products:
+    {% for rented_product in rented_products %}
+        {{ rented_product.name }}
+        is available - {{ rented_product.is_available }}
+    {% endfor %}
+
+
+{% endblock %}

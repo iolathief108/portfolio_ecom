@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block style %}
+  <style>
+    .ui.card .content img, .ui.cards>.card .content img {
+      width: 100%;
+    }
+  </style>
+{% endblock %}
+
+
+{% block content %}
+  <div class="ui container">
+    <h1>My Products</h1>
+    <div class="ui cards">
+      {% for product in products %}
+        <div class="card">
+          <div class="content">
+            <img src="{{ product.image_set.all.0.image.url }}" alt="">
+            <a href="{% url 'product-view' product.id %}" class="header">
+              {{ product.id  }} {{ product.name }}
+            </a>
+            <div class="meta">
+              {% if product.is_available %}
+                Available
+              {% else %}
+                Not Available
+              {% endif %}
+            </div>
+            <div class="extra content">
+              <div class="ui buttons">
+                <div class="ui button"><a href="{% url 'remove-product' product.id %}">Delete</a></div>
+                <div class="ui button"><a href="{% url 'edit-product' product.id %}">Edit</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <a class="ui button primary" href="{% url 'new-product' %}">Add Product</a>
+  </div>
+{% endblock content %}
+

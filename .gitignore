@@ -2,6 +2,8 @@
 __pycache__/
 *.py[cod]
 *$py.class
+observe/
+
 
 # C extensions
 *.so
@@ -120,6 +122,8 @@ venv.bak/
 # mkdocs documentation
 /site
 
+# other
+.idea/
 # mypy
 .mypy_cache/
 .dmypy.json

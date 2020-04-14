@@ -1,0 +1,35 @@
+core_category:
+  rows:
+  - id: 1
+    is_selectable: true
+    name: armor
+    parent: null
+  - id: 2
+    is_selectable: true
+    name: jamor
+    parent: null
+  - id: 3
+    is_selectable: true
+    name: knife
+    parent: null
+  - id: 4
+    is_selectable: true
+    name: 2k armor
+    parent: 1
+  - id: 5
+    is_selectable: true
+    name: samual jarmor
+    parent: 2
+sambal:
+- wow: dam
+  wow1: dam
+  wow1111111112: dam
+  wow3: dam
+- w211ow3: dam
+  w3333333333ow1: d2323am4
+  wow: damad
+  wow2: dam
+- wodddddddw3: dam
+  wow: '555555555555555'
+  wow111111111111: dam
+  wow1111111112: dam

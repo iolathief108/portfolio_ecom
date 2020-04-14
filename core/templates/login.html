@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="ui container">
+    <form method="POST" class="ui form">
+      {% csrf_token %}
+      <h1>Login</h1>
+      {{ form }}
+      <div class="form-group">
+        <button type="submit" class="ui button">Login</button>
+        <a href="{% url 'password_reset' %}">Forgot Password?</a>
+      </div>
+    </form>
+
+    <p>Need An Account? <a href="{% url 'signup' %}">Sign Up Now</a></p>
+
+  </div>
+{% endblock content %}

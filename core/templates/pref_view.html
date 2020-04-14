@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="ui container">
+    <h1>Profile</h1>
+    <form class="ui form" method="post" enctype="multipart/form-data">
+      <input type="hidden" name="update" value="profile">
+      {% csrf_token %}
+      {{ a_form }}
+      {{ u_form }}
+      <button class="ui button" type="submit">Update Profile</button>
+    </form>
+
+    <h1>Update Password</h1>
+    <form class="ui form" method="post" enctype="multipart/form-data">
+      <input type="hidden" name="update" value="password">
+      {% csrf_token %}
+      {{ p_form }}
+      <button class="ui button" type="submit">Update Password</button>
+    </form>
+
+    <h1>Delete My Account</h1>
+    <a href="{% url 'account-delete-view' user.username %}" class="ui button red">DELETE</a>
+  </div>
+{% endblock %}
